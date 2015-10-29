@@ -20,6 +20,7 @@
     COMMON_ENABLE_SPLUNKFORWARDER: False
     ENABLE_LEGACY_ORA: !!null
   roles:
+    - security
     - role: nginx
       nginx_sites:
       - certs
@@ -37,7 +38,6 @@
     - notifier
     - analytics_api
     - edx_notes_api
-    - demo
     - { role: 'rabbitmq', rabbitmq_ip: '127.0.0.1' }
     - oraclejdk
     - elasticsearch
